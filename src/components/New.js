@@ -47,8 +47,8 @@ class New extends React.Component {
 
         // style
         const bg = {
-            background: `url(${BgImg}) no-repeat center center fixed`,
-            // backgroundSize: "cover",
+            background: `url(${BgImg}) no-repeat top left fixed`,
+            backgroundSize: "cover",
             // backgroundRepeat: "no-repeat",
             height: "100vh",
             width: "100vw",
@@ -65,13 +65,13 @@ class New extends React.Component {
         return(
             <React.Fragment>
                 <div style={bg} className="container-fluid">
-                    <h1 className="text-center my-5 pt-5">New Game</h1>
+                    <h1 className="text-center my-3 pt-2">New Game</h1>
 
                     {/*form*/}
-                    <div className="row my-5">
+                    <div className="row">
 
                         {/*P1 Name*/}
-                        <div className="col-6 mb-5">
+                        <div className="col-6 mb-2">
                             <h2 className="text-center">Player 1</h2>
                             <div className="form-group mx-auto" style={half}>
                                 {/*<label htmlFor="exampleInputEmail1">Name</label>*/}
@@ -81,7 +81,7 @@ class New extends React.Component {
                         </div> {/*end P1 Name*/}
 
                         {/*P2 Name*/}
-                        <div className="col-6 mb-5">
+                        <div className="col-6 mb-2">
                             <h2 className="text-center">Player 2</h2>
                             <div className="form-group mx-auto" style={half}>
                                 {/*<label htmlFor="exampleInputEmail1">Name</label>*/}
@@ -90,7 +90,7 @@ class New extends React.Component {
                         </div>{/*end P2 Name*/}
 
                         {/*service*/}
-                        <div className="col-8 d-block text-center mx-auto my-5" style={{border: "2px solid black"}}>
+                        <div className="col-8 d-block text-center mx-auto my-4" style={{border: "2px solid black"}}>
                             <h2><strong>Who Serves First?</strong></h2>
                             <div className="form-check form-check-inline">
                                 <input className="form-check-input" type="radio" name="server" id="p1serve" value="p1" onChange={this.changeServer} />

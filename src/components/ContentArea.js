@@ -9,11 +9,11 @@ class ContentArea extends React.Component {
         super(props);
         this.state = {
             // display toggle
-            page: 'play', // new, play, winner
+            page: 'new', // new, play, winner
             // setup
-            p1: "jahn",
-            p2: "dong disco",
-            server: "p1",
+            p1: null,
+            p2: null,
+            server: null,
             // play screen
             score1: null,
             score2: null,
@@ -89,6 +89,7 @@ class ContentArea extends React.Component {
 
         return(
             <React.Fragment>
+                <div className="container" style={{maxHeight: '100vh', maxWidth: '100vw'}}>
 
                 {/*new screen*/}
                 {this.state.page === 'new' &&
@@ -118,6 +119,7 @@ class ContentArea extends React.Component {
                             replay={this.replay}
                     />
                 }
+                </div>
             </React.Fragment>
         );
     }

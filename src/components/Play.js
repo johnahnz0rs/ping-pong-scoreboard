@@ -90,16 +90,24 @@ class Play extends React.Component {
     checkServer = (score1, score2, scorer, server, totalScore) => {
         // if either score is over 21
         if (score1 >= 21 || score2 >= 21) {
-
-        } else {// if scores are under 21
-
+            if (server === 'p1') {
+                if (score1 > score2) {
+                    return 'p2'
+                }
+            } else {
+                if (score2 > score1) {
+                    return 'p1';
+                }
+            }
+        } else { // if scores are under 21
+            // if 5 serves have passed, then change server
             if (totalScore % 5 === 0) {
                 if (server === 'p1') {
                     return 'p2';
                 } else {
                     return 'p1';
                 }
-            } else {
+            } else { // else no change of service
                 return null;
             }
         }
