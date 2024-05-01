@@ -2,6 +2,8 @@ PPSB - Ping Pong ScoreBoard
 by johnahnz0rs
 
 
+A SIMPLE REACT APP TO KEEP SCORE DURING A PING PONG MATCH.
+
 
 
 
